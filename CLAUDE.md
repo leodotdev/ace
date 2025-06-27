@@ -63,19 +63,77 @@ import { Component } from '@base-ui-components/react/component';
 </Component.Root>
 ```
 
-### Available Components to Prioritize
-- Popover, Dialog, Menu, Accordion
-- Button, Checkbox, Radio, Switch  
-- Select, Slider, Progress
-- Tooltip, Alert Dialog
+### Available BaseUI Components (v1.0.0-beta.0)
+**Form & Input:**
+- Checkbox, Checkbox Group, Radio, Radio Group
+- Input, Number Field, Switch, Slider
+- Select, Field, Fieldset, Form
+
+**Layout & Navigation:**
+- Accordion, Collapsible, Tabs, Toolbar
+- Menu, Menubar, Context Menu, Navigation Menu
+- Separator, Scroll Area
+
+**Feedback & Overlay:**
+- Dialog, Alert Dialog, Popover, Tooltip
+- Toast, Progress, Meter
+- Avatar, Preview Card
+
+**Interactive:**
+- Toggle, Toggle Group
+- use-button hook (no Button component yet)
+
+**Note:** BaseUI doesn't have a Button component yet, use styled HTML buttons with Tailwind
+
+## Web App Studio Architecture
+
+### Core Concept
+Building a visual web app studio similar to Subframe/Plasmic/Framer, specifically for NextJS + BaseUI + Tailwind development.
+
+### Key Features
+- **Layout**: Sticky left/right panels with resizable canvas in center
+- **Left Panel Tabs**: AI Chat History, Component Tree, Pages, Assets
+- **Right Panel**: Properties inspector for selected elements
+- **Canvas**: Buttery smooth zoom, multi-select elements
+- **AI Workflow**: Select elements and prompt "add nav" → agent generates code
+- **Output**: Pure NextJS apps using only BaseUI components + Tailwind
+- **Asset Management**: Images, icons, files, and reusable components
+- **Design System**: Editable Tailwind/BaseUI tokens and component variants
+
+### Technical Stack
+- Frontend: NextJS 15 + React 19 + TypeScript
+- Components: BaseUI + Tailwind CSS (no plain HTML buttons/elements)
+- Canvas: Custom zoom/pan implementation with smooth performance
+- Multi-select: Advanced selection system for canvas elements
+- AI Integration: Claude/OpenAI for code generation
+- Code Generation: NextJS project output with BaseUI components
+
+### Canvas Requirements
+- Smooth zoom (60fps+) using CSS transforms
+- Multi-select with bounding box selection
+- Drag and drop for components
+- Real-time preview of generated components
+- Responsive preview modes
+
+### Component System
+- All UI uses BaseUI components (Button, Dialog, Popover, etc.)
+- Tailwind for styling with custom design tokens
+- Component variants using Tailwind's variant system
+- Reusable component library built by users
 
 ## TODO
 - [x] Install BaseUI dependencies
-- [ ] Set up root layout with isolation styles
-- [ ] Implement optimized hero background effect
-- [ ] Add comprehensive comments to components
-- [ ] Document component patterns and conventions
-- [ ] Set up proper linting and testing workflows
+- [x] Set up root layout with isolation styles
+- [ ] Plan application architecture and core features
+- [ ] Set up main layout with sticky left/right panels
+- [ ] Implement canvas with smooth zoom functionality
+- [ ] Create left panel with tabs (AI, tree, pages, assets)
+- [ ] Build right panel properties inspector
+- [ ] Implement multi-select functionality for canvas elements
+- [ ] Create AI chat integration for element generation
+- [ ] Build NextJS project generation system
+- [ ] Implement asset management system
+- [ ] Create design system editor for Tailwind/BaseUI
 
 ---
 *Last updated: 2025-06-27*
