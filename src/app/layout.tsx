@@ -27,7 +27,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* BaseUI requires isolation for proper portal rendering */}
+        <div className="root">
+          {children}
+        </div>
       </body>
     </html>
   );
